@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-script {
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+  }
+  .font-serif-luxury {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  .font-arabic {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+  }
+}
+
+.bg-parchment {
+  background-color: #faf7f2;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(203, 170, 85, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 85% 85%, rgba(132, 22, 46, 0.05) 0%, transparent 60%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, transparent 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #8a641f 0%, #cbaa55 50%, #99752b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-border {
+  border-image: linear-gradient(to bottom right, #dec177, #99752b, #edd79f, #b38b39) 1;
+}
+
+.gold-shimmer-btn {
+  background: linear-gradient(135deg, #741628 0%, #520b1a 60%, #3f0712 100%);
+  box-shadow: 0 4px 20px -2px rgba(107, 16, 36, 0.35), 0 0 0 1px rgba(203, 170, 85, 0.4);
+}
+
+.gold-shimmer-btn:hover {
+  box-shadow: 0 6px 26px -2px rgba(107, 16, 36, 0.55), 0 0 0 1.5px rgba(222, 193, 119, 0.85);
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes floatPetal {
+  0% {
+    transform: translateY(-5vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(105vh) translateX(60px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-petal {
+  animation-name: floatPetal;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-iteration-count: infinite;
+}
